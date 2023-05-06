@@ -20,6 +20,6 @@
         "build": "vite build",
         "preview": "vite preview",
         "lint": "eslint src --fix",
-        "deploy": "npm run build && git add docs/. && git commit --amend --no-edit && git push --all"
+        "deploy": "bash ./deploy.sh"
     }
 }
