@@ -1,9 +1,8 @@
-import mkcert from 'vite-plugin-mkcert';
 import { defineConfig } from 'vite';
 import { ViteMinifyPlugin } from 'vite-plugin-minify';
 
 export default defineConfig({
-    plugins: [mkcert(), ViteMinifyPlugin({})],
+    plugins: [ViteMinifyPlugin({})],
     build: {
         emptyOutDir: true,
         outDir: './docs',
@@ -23,9 +22,6 @@ export default defineConfig({
                 entryFileNames: '[name].js'
             }
         }
-    },
-    server: {
-        https: true,
     },
     define: {
         'process.env.appName': JSON.stringify('#NAME#'),

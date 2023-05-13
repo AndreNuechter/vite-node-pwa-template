@@ -32,10 +32,9 @@ The smaller one is also used as favicon.
 
 ## Further topics
 
-### Optional HTTPS during dev
+### Developing
 
-The dev-server is set up to serve https using the root certificate installed in the system.
-If that is undesired, the `mkcert` plugin and the server.https field should be removed from the vite.config.
+After setup, run `npm run dev` to start a dev server that will respond to changes made to files in the `src/` directory.
 
 ### Linting
 
@@ -44,17 +43,16 @@ To check and automatically fix some issues, run `npm run lint`.
 
 ### Building for production
 
-Run `npm run build` to build production-ready version of your app.
+Run `npm run build` to build a production-ready version of your app.
+The output of this will be placed inside the `docs/` directory.
 
-This build will be placed inside the `docs/` directory.
-
-To serve the current production build locally, use `npm run preview`.
+To serve a current production build locally, use `npm run preview`.
 
 #### Deploying
 
 The intended hosting environment is a github page.
 
-The build output is placed inside a directory called "docs", because a github repository can be configured to serve a corresponding page from the project root or a directory called docs in the root.
+The build output is placed inside a directory called "docs", because a github repository can be configured to serve a corresponding page from the project root or a directory called docs in the root and as we want to serve a minified version of the app, while somewhat maintaining order, we chose the latter option.
 
-The current state of your app can be build and deployed in one step using `npm run deploy`.
-Note that this command does not stash current changes, which may lead to unfinished code making it into the wild, so beware!
+The current state of your app can be build and deployed in one step using `npm run deploy`, which will run a _bash_ script.
+Note that this script will stash and then possibly re-apply uncommitted changes to the working directory
