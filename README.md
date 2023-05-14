@@ -55,4 +55,4 @@ The intended hosting environment is a github page.
 The build output is placed inside a directory called "docs", because a github repository can be configured to serve a corresponding page from the project root or a directory called docs in the root and as we want to serve a minified version of the app, while somewhat maintaining order, we chose the latter option.
 
 The current state of your app can be build and deployed in one step using `npm run deploy`, which will run a _bash_ script.
-Note that this script will stash and then possibly re-apply uncommitted changes to the working directory
+Note that this script will stash and then possibly re-apply uncommitted changes to the working directory.
