@@ -18,8 +18,10 @@ export default defineConfig({
     },
     base: './',
     worker: {
-        /* We dont want a hash on the worker file, so that the service worker, that handles the cache, remains constant and be updated on new builds.
-        Otherwise a new worker would be registered on each build, which would lock the cache, as the old one, that handled the files of the previous build, remained active. */
+        /* We dont want a hash on the worker file,
+        so that the service worker is updated and
+        not a new one added on each build,
+        which would lock the cache */
         rollupOptions: {
             output: {
                 entryFileNames: '[name].js'
