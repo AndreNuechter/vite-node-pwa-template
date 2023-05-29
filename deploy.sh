@@ -12,7 +12,7 @@ function main() {
 
     local index_is_dirty=false;
 
-    # check if ther're uncommitted changes
+    # check if there're uncommitted changes
     if [[ $(git status --porcelain) ]];
         then index_is_dirty=true;
     fi
